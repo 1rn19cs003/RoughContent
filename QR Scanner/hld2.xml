@@ -1,0 +1,124 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="HLD - QR Restaurant System (Descriptive)">
+    <mxGraphModel dx="1800" dy="1000" grid="1" gridSize="10">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- CLIENTS -->
+        <mxCell id="2" value="Customer App&#xa;(Mobile Web)&#xa;• Scan QR&#xa;• View Menu&#xa;• Ask AI&#xa;• Place Order" style="rounded=1;fillColor=#dae8fc;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="200" height="120" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="3" value="Staff / Admin Dashboard&#xa;(Web / Tablet)&#xa;• Orders&#xa;• Kitchen&#xa;• Reports" style="rounded=1;fillColor=#d5e8d4;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="240" width="200" height="120" as="geometry"/>
+        </mxCell>
+
+        <!-- GATEWAY -->
+        <mxCell id="4" value="API Gateway&#xa;• Auth Check&#xa;• RBAC&#xa;• Rate Limit" style="rhombus;fillColor=#fff2cc;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="180" width="260" height="140" as="geometry"/>
+        </mxCell>
+
+        <!-- SERVICES -->
+        <mxCell id="5" value="Auth Service&#xa;(OTP · JWT)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="40" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="6" value="Menu Service&#xa;(Items · Prices · Ratings)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="120" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="7" value="Order Service&#xa;(Cart → Placed → Approved)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="200" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="8" value="Table Session Service&#xa;(QR · Table · TTL)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="280" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="9" value="Bill Service&#xa;(Totals · Invoice)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="360" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="10" value="Payment Service&#xa;(UPI · Card)" style="rounded=1;fillColor=#e1d5e7;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="440" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="11" value="Kitchen Workflow&#xa;(Preparing → Ready)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="520" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="12" value="Notification Service&#xa;(WebSocket / Push)" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="600" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="13" value="AI Assistant&#xa;(LLM + Menu RAG)" style="rounded=1;fillColor=#f8cecc;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="680" width="220" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- DATA -->
+        <mxCell id="14" value="PostgreSQL&#xa;(Prisma ORM)" style="shape=cylinder3;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="220" width="120" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="15" value="Redis&#xa;(Session · Cart)" style="shape=cylinder3;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="900" y="360" width="120" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- FLOWS -->
+        <mxCell id="16" value="Public / Auth Requests" style="endArrow=block;html=1;" edge="1" parent="1" source="2" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="17" value="Staff / Admin Requests" style="endArrow=block;html=1;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="18" value="OTP Login" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="5">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="19" value="Menu Fetch (No Auth)" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="6">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="20" value="Place / Approve Order" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="7">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="21" value="QR Session Mapping" style="endArrow=block;html=1;" edge="1" parent="1" source="4" target="8">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="22" value="Generate Bill" style="endArrow=block;html=1;" edge="1" parent="1" source="7" target="9">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="23" value="Pay Bill" style="endArrow=block;html=1;" edge="1" parent="1" source="9" target="10">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="24" value="Send to Kitchen" style="endArrow=block;html=1;" edge="1" parent="1" source="7" target="11">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="25" value="Realtime Updates" style="endArrow=block;html=1;" edge="1" parent="1" source="11" target="12">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="26" value="Ask About Item" style="endArrow=block;html=1;" edge="1" parent="1" source="2" target="13">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="27" value="Persist Data" style="endArrow=block;html=1;" edge="1" parent="1" source="7" target="14">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="28" value="Session Cache" style="endArrow=block;html=1;" edge="1" parent="1" source="8" target="15">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

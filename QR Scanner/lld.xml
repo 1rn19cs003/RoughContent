@@ -1,0 +1,52 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="LLD - QR Restaurant System">
+    <mxGraphModel dx="1422" dy="798" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="tables" value="DATABASE SCHEMA" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontStyle=1;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="200" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="u_table" value="USERS&#xa;--&#xa;id (PK)&#xa;phone_number&#xa;role (ENUM)&#xa;restaurant_id" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="160" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="o_table" value="ORDERS&#xa;--&#xa;id (PK)&#xa;table_id (FK)&#xa;session_id&#xa;status (ENUM)&#xa;total_price&#xa;created_at" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="320" y="80" width="160" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="oi_table" value="ORDER_ITEMS&#xa;--&#xa;id (PK)&#xa;order_id (FK)&#xa;menu_item_id (FK)&#xa;quantity&#xa;special_notes&#xa;item_status" style="shape=table;startSize=30;container=1;collapsible=0;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;fillColor=#f5f5f5;" vertex="1" parent="1">
+          <mxGeometry x="580" y="80" width="180" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="flow_box" value="ORDER STATE MACHINE" style="swimlane;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="40" y="300" width="720" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="s1" value="PLACED&#xa;(Customer)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="flow_box">
+          <mxGeometry x="30" y="60" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="APPROVED&#xa;(Waiter)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="flow_box">
+          <mxGeometry x="190" y="60" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="PREPARING&#xa;(Kitchen)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="flow_box">
+          <mxGeometry x="350" y="60" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="DELIVERED&#xa;(Staff)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#e1d5e7;" vertex="1" parent="flow_box">
+          <mxGeometry x="510" y="60" width="90" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="BILLED&#xa;(Payment)" style="ellipse;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="flow_box">
+          <mxGeometry x="630" y="60" width="80" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="flow_box" source="s1" target="s2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="flow_box" source="s2" target="s3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="flow_box" source="s3" target="s4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="flow_box" source="s4" target="s5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
