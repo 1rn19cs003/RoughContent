@@ -1,0 +1,133 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="2xNeI2ip-xHF17hxOhL9">
+    <mxGraphModel dx="1269" dy="608" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-1" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;fontSize=18;fontStyle=1;fontColor=#E25B1C;" value="PujaGo — System Architecture" vertex="1">
+          <mxGeometry height="40" width="500" x="520" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=2;fontColor=#666666;" value="Clients" vertex="1">
+          <mxGeometry height="25" width="80" x="40" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" value="&lt;b&gt;User app&lt;/b&gt;&#xa;React Native (iOS + Android)&#xa;&#xa;• Home / Browse&#xa;• Booking flow&#xa;• Live tracking&#xa;• Payments" vertex="1">
+          <mxGeometry height="130" width="200" x="80" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" value="&lt;b&gt;Pandit app&lt;/b&gt;&#xa;React Native (iOS + Android)&#xa;&#xa;• Accept bookings&#xa;• Navigation (Maps)&#xa;• Earnings dashboard&#xa;• Availability settings" vertex="1">
+          <mxGeometry height="130" width="200" x="620" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEEDFE;strokeColor=#534AB7;fontColor=#3C3489;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=8;" value="&lt;b&gt;Admin panel&lt;/b&gt;&#xa;React web dashboard&#xa;&#xa;• Order management&#xa;• Pandit onboarding&#xa;• Inventory / Samagri&#xa;• Analytics &amp; revenue" vertex="1">
+          <mxGeometry height="130" width="200" x="1150" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-6" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-3" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-7" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-4" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-8" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-5" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-9" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=2;fontColor=#666666;" value="API Gateway &amp; Auth" vertex="1">
+          <mxGeometry height="25" width="160" x="40" y="275" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#444441;fontColor=#333333;fontSize=12;fontStyle=0;" value="&lt;b&gt;API Gateway + Auth Layer&lt;/b&gt;&#xa;Node.js / Express · /api/v1/...&#xa;&#xa;JWT auth  ·  OTP via Firebase  ·  Rate limiting  ·  SSL/TLS  ·  REST + WebSocket" vertex="1">
+          <mxGeometry height="70" width="1000" x="200" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-11" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-10" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-12" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-10" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-13" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-10" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-14" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-10" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-15" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-10" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-16" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=2;fontColor=#666666;" value="Backend Microservices — Node.js + Express" vertex="1">
+          <mxGeometry height="25" width="340" x="40" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#1D9E75;fontColor=#085041;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Booking Service&lt;/b&gt;&#xa;&#xa;• Create / update / cancel bookings&#xa;• Muhurat validation&#xa;• BookingStatus management&#xa;• BookingItem tracking" vertex="1">
+          <mxGeometry height="130" width="185" x="200" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-18" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#1D9E75;fontColor=#085041;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Pandit Service&lt;/b&gt;&#xa;&#xa;• Profiles + KYC&#xa;• Availability slots&#xa;• Weekly schedule&#xa;• Day overrides&#xa;• Ratings + matching" vertex="1">
+          <mxGeometry height="130" width="185" x="405" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#1D9E75;fontColor=#085041;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Samagri Service&lt;/b&gt;&#xa;&#xa;• Inventory management&#xa;• Item bundles per puja&#xa;• Optional add-ons&#xa;• Delivery ETA (Maps)&#xa;• Supplier coordination" vertex="1">
+          <mxGeometry height="130" width="185" x="610" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-20" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#1D9E75;fontColor=#085041;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Notification Service&lt;/b&gt;&#xa;&#xa;• Push (Firebase FCM)&#xa;• SMS / WhatsApp (Twilio)&#xa;• Email (SendGrid)&#xa;• Booking reminders&#xa;• Muhurat alerts" vertex="1">
+          <mxGeometry height="130" width="185" x="815" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1F5EE;strokeColor=#1D9E75;fontColor=#085041;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Payment Service&lt;/b&gt;&#xa;&#xa;• Razorpay integration&#xa;• Escrow management&#xa;• Refunds + partial refunds&#xa;• Pandit settlement (T+1)&#xa;• Cancellation fee calc" vertex="1">
+          <mxGeometry height="130" width="185" x="1020" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-22" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-17" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-23" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-18" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-24" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-19" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-25" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-20" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-26" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-21" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-27" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=2;fontColor=#666666;" value="Data Layer" vertex="1">
+          <mxGeometry height="25" width="100" x="40" y="590" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-28" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;PostgreSQL&lt;/b&gt; via Supabase&#xa;Primary database · Prisma ORM&#xa;&#xa;Users · Roles · Pandits · Pujas&#xa;Bookings · Payments · Cart · Reviews&#xa;PanditAvailability · WeeklySchedule&#xa;PujaReason · PujaMethod · Samagri" vertex="1">
+          <mxGeometry height="140" width="260" x="200" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-29" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Redis&lt;/b&gt; Cache Layer&#xa;&#xa;• Slot lock cache (15 min TTL)&#xa;• Session tokens&#xa;• Pandit availability cache&#xa;• Muhurat slots cache&#xa;• Home screen puja list (5 min)" vertex="1">
+          <mxGeometry height="140" width="240" x="490" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-30" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;AWS S3&lt;/b&gt; File Storage&#xa;&#xa;• Pandit profile photos&#xa;• KYC documents&#xa;• Booking receipts&#xa;• Puja completion photos" vertex="1">
+          <mxGeometry height="140" width="220" x="760" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-31" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E6F1FB;strokeColor=#185FA5;fontColor=#0C447C;fontSize=11;align=left;verticalAlign=top;spacingLeft=8;spacingTop=8;" value="&lt;b&gt;Bull Job Queue&lt;/b&gt;&#xa;Background jobs&#xa;&#xa;• Booking reminders (24h before)&#xa;• Slot lock expiry cleanup&#xa;• Samagri dispatch trigger&#xa;• Payment settlement (T+1)" vertex="1">
+          <mxGeometry height="140" width="220" x="1010" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-32" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-28" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-33" edge="1" parent="1" source="nqkuNGVXLmiTm60NB1mW-31" style="edgeStyle=orthogonalEdgeStyle;" target="nqkuNGVXLmiTm60NB1mW-36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-34" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=12;fontStyle=2;fontColor=#666666;" value="External Integrations" vertex="1">
+          <mxGeometry height="25" width="180" x="40" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-35" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;Razorpay&lt;/b&gt;&#xa;Payments + Escrow" vertex="1">
+          <mxGeometry height="60" width="160" x="200" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-36" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;Firebase&lt;/b&gt;&#xa;OTP Auth + Push" vertex="1">
+          <mxGeometry height="60" width="160" x="380" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-37" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;Twilio&lt;/b&gt;&#xa;SMS + WhatsApp" vertex="1">
+          <mxGeometry height="60" width="160" x="560" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-38" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;Google Maps&lt;/b&gt;&#xa;Routing + ETA" vertex="1">
+          <mxGeometry height="60" width="160" x="740" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-39" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;SendGrid&lt;/b&gt;&#xa;Transactional emails" vertex="1">
+          <mxGeometry height="60" width="160" x="920" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-40" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAEEDA;strokeColor=#BA7517;fontColor=#412402;fontSize=11;" value="&lt;b&gt;AWS (EC2/ECS)&lt;/b&gt;&#xa;Hosting + S3 storage" vertex="1">
+          <mxGeometry height="60" width="160" x="1100" y="820" as="geometry" />
+        </mxCell>
+        <mxCell id="nqkuNGVXLmiTm60NB1mW-41" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontColor=#614B00;fontSize=11;align=left;verticalAlign=top;spacingLeft=10;spacingTop=10;" value="&lt;b&gt;Prisma Schema — Models already built&lt;/b&gt;&#xa;&#xa;User · Role · Pandit · PanditPujaPricing · PanditAvailability · PanditWeeklySchedule · PanditDayOverride&#xa;Puja · PujaReason · PujaMethod · PoojaSamagri&#xa;Booking · BookingItem · Payment · Cart · CartItem · Review&#xa;&#xa;Suggested additions: address/lat/lng on User · proper Review relations · KundaliRequest · AstrologerProfile" vertex="1">
+          <mxGeometry height="100" width="1060" x="200" y="920" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
